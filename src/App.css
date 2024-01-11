@@ -1,10 +1,16 @@
 .App {
   text-align: center;
+  background-color: rgba(235, 227, 227, 0.126);
+}
+body {
+  background-color: rgba(235, 227, 227, 0.126);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  background-color: rgba(235, 227, 227, 0.23);
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -21,11 +27,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: rgb(207, 183, 183); */
+
 }
 
 .App-link {
   color: #61dafb;
+
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +43,290 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.gradebook-title {
+  font-size: 30px;
+
+}
+
+
+/* NAVBAR */
+.navbar-container {
+  width: 80%;
+  margin-left: 10%;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.968);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Layout for content */
+.content-container {
+  display: flex;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.students-section {
+  flex: 0 0 30%; 
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 200px;
+
+}
+
+.students-section .student-list {
+  max-height: 450px; /* Fixed max height */
+  overflow-y: auto; /* Enable vertical scroll */
+  /* Add padding if needed, and ensure the box-sizing is set to border-box */
+  padding-right: -10px;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbars while allowing scrolling */
+.students-section .student-list::-webkit-scrollbar {
+  width: 0.5em; /* Adjust as needed */
+}
+
+.students-section .student-list::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hide the scrollbar thumb */
+}
+
+.student-grade-container .grades-list::-webkit-scrollbar {
+  width: 0.5em; /* Adjust as needed */
+}
+
+.student-grade-container .grades-list::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hide the scrollbar thumb */
+}
+
+
+.grade-dist {
+  color: white;
+  font-size: 25px;
+}
+
+.chart-section {
+  width: 40%;
+  margin-top: 40px;
+  margin-right: 100px;
+}
+
+/* Navbar button styles */
+/* Navbar button styles */
+.navbar .nav-elem {
+  margin: 0 10px;
+  padding: 5px 15px;
+  border: none;
+  background-color: lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Update the font size if needed */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underlines from links */
+  display: inline-block; /* Make it an inline-block element */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to navbar elements */
+}
+.download-button,
+.upload-button {
+  margin: 0 10px; /* Keep the buttons spaced from other elements */
+  padding: 5px 15px;
+  border: none;
+  background-color: lightblue;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: black; /* Set the text color to black */
+  margin-left: 30px;
+}
+
+.download-button {
+  margin-left: 350px;
+}
+
+.download-button:hover,
+.upload-button:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar .nav-elem:hover {
+  background-color: #e0e0e0; /* Darker shade on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+.download-button:hover,
+.upload-button:hover {
+  background-color: #e0e0e0; /* Darker shade on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+/* Student Name List Styles */
+.student-name {
+  width: 50%; /* Keeping the width as previously set */
+  margin: 25px auto; 
+  padding: 10px; 
+  border: 2px solid #0d0d0d;
+  border-radius: 8px;
+  background-color: rgba(171, 247, 239, 0.431);
+  font-family: Arial, sans-serif;
+  font-size: 1.3em; /* Keeping the font size as previously set */
+  font-weight: bold;
+  color: #000; /* Text color black */
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.student-name:hover {
+  background-color: #ccffcc;
+  transform: scale(1.05); /* Scale effect on hover */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.content-container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  gap: -100px; 
+}
+
+.students-section {
+  flex: 0 0 30%; 
+ 
+  margin-top: 5px;
+  margin-right: -220px;
+  margin-left: 200px;
+}
+
+.chart-section {
+  flex: 0 0 60%; /* Increased width percentage for chart section */
+  /* Other styles remain the same */
+}
+
+.chart-container,
+.student-grade-container {
+  background-color: #8fbcec;  /* Light blue background */
+  border-radius: 30px; /* Increased rounded corners */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 480px; /* Adjust height automatically */
+  width: 60%; /* Adjust width to your preference */
+  margin: auto; /* Center the container */
+  border: 2px solid #000; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  margin-bottom: 10px;
+}
+
+.chart-container h3,
+.student-grade-container h3 {
+  color: black; /* Title text color */
+  margin-bottom: 20px;
+}
+
+/* Adjust the BarChart styles if needed */
+.chart-container .BarChart {
+  width: 100%; /* Adjust width as needed */
+   fill: #a46fd8;
+}
+
+.student-grade-container .grades-list {
+  max-height: 300px; /* Fixed max height */
+  overflow-y: auto; /* Enable vertical scroll */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+.student-grade-container {
+  background-color: (185, 219, 253);
+  border-radius: 30px; /* Increased rounded corners */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space distribution */
+  height: 480px; /* Adjust height automatically */
+  width: 60%; /* Adjust width to your preference */
+
+  margin: auto; /* Center the container */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.student-grade-container h3 {
+  margin-bottom: 20px;
+}
+
+.assignments-list {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.assignment {
+  margin-bottom: 5px;
+}
+
+.student-grade-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.student-grade-container li {
+  margin-bottom: 5px;
+}
+
+
+.grades-list {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.grade-item {
+  background-color: #f0f0f0; /* Light background for individual grade items */
+  padding: 5px 10px; /* Padding for spacing */
+  margin-bottom: 10px; /* Margin between grade items */
+  border-radius: 8px; /* Rounded corners for grade items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: 400px;
+  height: 30px;
+}
+
+.grade-item span {
+  font-weight: bold; /* Making the text bold */
+}
+
+.back-button {
+  margin: 0 10px;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Update the font size if needed */
+  text-align: center; /* Center the text horizontally */
+  text-decoration: none; /* Remove underlines from links */
+  display: inline-block; /* Make it an inline-block element */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
